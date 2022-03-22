@@ -1,0 +1,50 @@
+# https://docs.docker.com/compose/compose-file/
+version: "3.8"
+
+# network
+# 这个是容器内局域网网络名
+networks:				
+  area-network:
+    driver: bridge
+
+services:
+
+### frontend #################
+# 前端文件，注意这里可以当作变量在局域网内使用
+  frontend:
+    container_name: depoly-frontend
+    build:
+      context: ./frontend
+    ports:
+      -  7003:7003
+    restart: always
+    depends_on:
+      - backend
+    networks:
+      - area-network
+
+### backend #################
+# 后端文件，注意这里可以当作变量在局域网内使用
+  backend:
+    container_name: depoly-backend
+    build:
+      context: ./backend
+    ports:
+      - 127.0.0.1:7002:7002
+    restart: always
+    depends_on:
+      - database
+    networks:
+      - area-network
+
+### database #################
+# 数据库，注意这里可以当作变量在局域网内使用
+  database:
+    container_name: depoly-database
+    build:
+      context: ./database
+    ports:
+      - "127.0.0.1:27017:27017"
+    restart: always
+    networks:
+      - area-network
