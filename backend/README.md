@@ -1,1 +1,3 @@
-### 后端项目，使用 Koala.js + Typescript 构建
+### バックエンド(Koa.js + Typescript)
+
+### 后端(Koa.js + Typescript)

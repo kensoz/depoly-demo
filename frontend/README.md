@@ -1,1 +1,3 @@
-### 前端项目，使用 Vue 3 + Typescript + Vite 构建
+### フロントエンド(Vue 3 + Typescript + Vite)
+
+### 前端(Vue 3 + Typescript + Vite)
