@@ -1,30 +1,32 @@
 <template>
-  <button type="button" @click="count++">
-    front end count is: {{ count }}
-  </button>
+  <main>
+    <div><strong>データ:</strong></div>
+    <br />
+    <div>{{ data }}</div>
+  </main>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
 import axios from "axios";
 
-const host: number = 7003;
-const count = ref<number>(0);
-
+const host: number = 7021;
 interface IDocker {
   id: string;
 }
 
-// apiリクエスト
-// api请求
+// ja:apiリクエスト
+// zh:api请求
+const data = ref<IDocker[]>();
 const api = async (): Promise<void> => {
   await axios.get<IDocker[]>("/test").then((res): void => {
     console.log(res.data);
+    data.value = res.data;
   });
 };
 
-// 起動
-// 启动
+// ja:起動
+// zh:启动
 api();
 console.log(`frontend on port ${host} 🚀`);
 </script>
