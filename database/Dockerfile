@@ -6,11 +6,11 @@ FROM mongo:latest
 # zh:指定作者
 LABEL maintainer="kensoz"
 
-# ja:管理者アカウント作者
+# ja:管理者アカウント作成
 # zh:默认开启授权，并创建超管用户
 ENV MONGO_INITDB_ROOT_USERNAME root
 
-# ja:管理者パスワード作者
+# ja:管理者パスワード作成
 # zh:超管密码
 ENV MONGO_INITDB_ROOT_PASSWORD root
 
