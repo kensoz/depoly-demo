@@ -15,8 +15,7 @@ DockerでフルスタックのWeb Appをコンテンツ化にするdemo\
 
 ## 使用
 
-- 日本語説明：[ブログ]() ・ [Qiita]()
-- 中文说明：[博客]() ・ [SegmentFault ]()・ [掘金]()
+
 
 ```bash
 docker-compose up -d
