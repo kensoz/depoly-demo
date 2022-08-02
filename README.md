@@ -4,16 +4,19 @@
 
 
 
-Dockerで構築したWeb APPのdemoです。
+DockerでフルスタックのWeb Appをコンテンツ化にするdemo
+将一个全栈项目docker容器化demo
+
+- FE：Vue.js
+- BE：Koa.js
+- DB：MongoDB
+
+
+
+## 使用
 
 - 日本語説明：[ブログ]() ・ [Qiita]()
 - 中文说明：[博客]() ・ [SegmentFault ]()・ [掘金]()
-
-
-
-## Getting Started
-
-start with Docker
 
 ```bash
 docker-compose up -d
