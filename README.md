@@ -4,7 +4,7 @@
 
 
 
-DockerでフルスタックのWeb Appをコンテンツ化にするdemo
+DockerでフルスタックのWeb Appをコンテンツ化にするdemo\
 将一个全栈项目docker容器化demo
 
 - FE：Vue.js
